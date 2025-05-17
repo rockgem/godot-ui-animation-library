@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cawfyydj325or"]
+
+[ext_resource type="Script" uid="uid://ddqrdjtnx86gw" path="res://addons/godot_ui_animations/UiAnimationHandler.gd" id="1_gqgmu"]
+
+[node name="UiAnimationHandler" type="Node"]
+process_mode = 3
+script = ExtResource("1_gqgmu")

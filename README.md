@@ -8,3 +8,15 @@ https://github.com/user-attachments/assets/f8084790-d504-47f0-9ff8-d0901b0816de
   UIAnimation.animate_pop($Panel)`
 
   note that the functions requires a Control reference to be passed in
+
+
+# Available animations currently in this version:
+
+`animate_pop()`
+`animate_shrink()`
+`animate_slide_from_left()`
+`animate_slide_to_left()`
+`animate_slide_from_right()`
+`animate_slide_to_right()`
+`animate_from_left_to_center()`
+`animate_from_center_to_left()`

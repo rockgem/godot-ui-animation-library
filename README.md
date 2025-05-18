@@ -1,4 +1,4 @@
-# Example of a preview code:
+# Code examples:
 **Making the panel popup in the center of the screen**
 
 

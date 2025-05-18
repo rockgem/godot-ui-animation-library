@@ -1,14 +1,24 @@
+# Quick Start
+### Installation
+Install the plugin through Godot Asset Library (recommended). Or copy the godot_ui_animations folder into addons/ folder
+
+### Usage
+Go to your Control node's script, specifically in the `_ready()` function and call `UIAnimation.animate_slide_from_left()` as an example.
+
 # Code examples:
+> [!NOTE]
+> This add-on is currently in development, it may get future updates and improvements in the future.
 **Making the panel popup in the center of the screen**
 
-### NOTE
 The animation code must be put inside the Control's `_ready()` function. That way, when the control gets added into the scene tree, the animation will get the correct size of the node to be able to properly display the panels in the correct positions.
 
 
 https://github.com/user-attachments/assets/f8084790-d504-47f0-9ff8-d0901b0816de
 
-`func _ready():
-  UIAnimation.animate_pop($Panel)`
+```
+func _ready():
+  UIAnimation.animate_pop($Panel)
+```
 
   ### Note that the functions requires a Control reference to be passed in
   ![image](https://github.com/user-attachments/assets/c25307e4-f7a7-4453-986b-28d98dba1196)

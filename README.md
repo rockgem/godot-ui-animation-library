@@ -10,7 +10,12 @@ https://github.com/user-attachments/assets/f8084790-d504-47f0-9ff8-d0901b0816de
 `func _ready():
   UIAnimation.animate_pop($Panel)`
 
-  note that the functions requires a Control reference to be passed in
+  ### Note that the functions requires a Control reference to be passed in
+  ![image](https://github.com/user-attachments/assets/c25307e4-f7a7-4453-986b-28d98dba1196)
+  ### It can even be `self` as long as the node being passed in is a Control node
+  ![image](https://github.com/user-attachments/assets/eacc4f49-5ca3-49f2-a427-805307274136)
+
+
 
 
 # Available animations currently in this version:

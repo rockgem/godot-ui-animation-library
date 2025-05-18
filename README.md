@@ -1,6 +1,8 @@
 # Code examples:
 **Making the panel popup in the center of the screen**
-The animation code must be put inside the Control's `_ready()` function. That way, when the controls get's added into the scene tree, the animation will get the correct size of the node to be able to properly display the panels in the correct positions.
+
+### NOTE
+The animation code must be put inside the Control's `_ready()` function. That way, when the control gets added into the scene tree, the animation will get the correct size of the node to be able to properly display the panels in the correct positions.
 
 
 https://github.com/user-attachments/assets/f8084790-d504-47f0-9ff8-d0901b0816de

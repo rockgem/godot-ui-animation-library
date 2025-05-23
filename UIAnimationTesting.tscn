@@ -82,6 +82,29 @@ layout_mode = 2
 text = "Testing Panel"
 horizontal_alignment = 1
 
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -369.0
+offset_top = -60.0
+offset_right = 369.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="SlideFromLeftToCenter" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+text = "From Left to Center"
+
+[node name="SlideFromRightToCenter" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+text = "From Right to Center"
+
 [connection signal="pressed" from="HBoxContainer/ResetPositionCenter" to="." method="_on_reset_position_center_pressed"]
 [connection signal="pressed" from="HBoxContainer/SlideFromLeft" to="." method="_on_slide_from_left_pressed"]
 [connection signal="pressed" from="HBoxContainer/SlideToLeft" to="." method="_on_slide_to_left_pressed"]
@@ -89,3 +112,5 @@ horizontal_alignment = 1
 [connection signal="pressed" from="HBoxContainer/SlideToRight" to="." method="_on_slide_to_right_pressed"]
 [connection signal="pressed" from="HBoxContainer/Popup" to="." method="_on_popup_pressed"]
 [connection signal="pressed" from="HBoxContainer/Shrink" to="." method="_on_shrink_pressed"]
+[connection signal="pressed" from="HBoxContainer2/SlideFromLeftToCenter" to="." method="_on_slide_from_left_to_center_pressed"]
+[connection signal="pressed" from="HBoxContainer2/SlideFromRightToCenter" to="." method="_on_slide_from_right_to_center_pressed"]

@@ -27,6 +27,14 @@ func _on_slide_to_right_pressed() -> void:
 
 func _on_reset_position_center_pressed() -> void:
 	$Panel.position.x = (get_viewport().get_visible_rect().size.x / 2) - ($Panel.size.x / 2)
-	$Panel.position.y = (get_viewport().get_visible_rect().size.y - $Panel.size.y) - ($Panel.size.y / 2)
+	$Panel.position.y = (get_viewport().get_visible_rect().size.y / 2) - ($Panel.size.y / 2)
 	
 	$Panel.scale = Vector2.ONE
+
+
+func _on_slide_from_left_to_center_pressed() -> void:
+	UIAnimation.animate_from_left_to_center($Panel)
+
+
+func _on_slide_from_right_to_center_pressed() -> void:
+	UIAnimation.animate_from_right_to_center($Panel)

@@ -36,6 +36,8 @@ func _ready():
 `animate_slide_to_right()`
 `animate_from_left_to_center()`
 `animate_from_center_to_left()`
+`animate_from_right_to_center()`
+`animate_from_center_to_right()`
 
 
 https://github.com/user-attachments/assets/90c8728d-0d18-4cff-8223-4471f86ffe3d

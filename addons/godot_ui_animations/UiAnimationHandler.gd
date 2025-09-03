@@ -54,6 +54,9 @@ func animate_pop(node: Control) -> Signal:
 
 
 func animate_shrink(node: Control) -> Signal:
+	node.pivot_offset.x = node.size.x / 2
+	node.pivot_offset.y = node.size.y / 2
+
 	var t = create_tween()
 	t.tween_property(node, 'scale', Vector2.ZERO, default_speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
 	

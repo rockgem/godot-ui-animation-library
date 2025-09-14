@@ -12,14 +12,14 @@ func animate_slide_from_left(node: Control, offset := default_offset, speed := d
 	node.position.x = - node.size.x
     
 	var t = create_tween()
-	t.tween_property(node, 'position:x', default_offset, default_speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	t.tween_property(node, 'position:x', offset, speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
     
 	return t.finished
 
 
 func animate_slide_to_left(node: Control, offset := default_offset, speed := default_speed) -> Signal:
 	var t = create_tween()
-	t.tween_property(node, 'position:x', -node.size.x, default_speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+	t.tween_property(node, 'position:x', -node.size.x, speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
     
 	return t.finished
 
@@ -30,14 +30,14 @@ func animate_slide_from_right(node: Control, offset := default_offset, speed := 
 	var vp_size = get_viewport().get_visible_rect().size.x
     
 	var t = create_tween()
-	t.tween_property(node, 'position:x', (vp_size - node.size.x) - default_offset, default_speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	t.tween_property(node, 'position:x', (vp_size - node.size.x) - offset, speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
     
 	return t.finished
 
 
 func animate_slide_to_right(node: Control, offset := default_offset, speed := default_speed) -> Signal:
 	var t = create_tween()
-	t.tween_property(node, 'position:x', get_viewport().size.x, default_speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+	t.tween_property(node, 'position:x', get_viewport().size.x, speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
 	
 	return t.finished
 

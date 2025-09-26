@@ -34,6 +34,8 @@ func _ready():
 `animate_slide_to_left()`
 `animate_slide_from_right()`
 `animate_slide_to_right()`
+`animate_slide_from_top()`
+`animate_slide_to_top()`
 `animate_from_left_to_center()`
 `animate_from_center_to_left()`
 `animate_from_right_to_center()`

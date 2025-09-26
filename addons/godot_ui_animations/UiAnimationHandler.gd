@@ -93,3 +93,19 @@ func animate_from_center_to_right(node: Control) -> Signal:
 	t.tween_property(node, 'position:x', node.size.x, default_speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
 	
 	return t.finished
+
+
+func animate_slide_from_top(node: Control, offset: float = default_offset, speed := default_speed) -> Signal:
+	node.position.y = -node.size.y
+	
+	var t = create_tween()
+	t.tween_property(node, 'position:y', offset, speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	
+	return t.finished
+
+
+func animate_slide_to_top(node: Control, speed := default_speed) -> Signal:
+	var t = create_tween()
+	t.tween_property(node, 'position:y', -node.size.y, speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+	
+	return t.finished

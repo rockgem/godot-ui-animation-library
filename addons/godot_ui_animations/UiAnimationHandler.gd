@@ -48,7 +48,7 @@ func animate_pop(node: Control, speed := default_speed) -> Signal:
 	node.scale = Vector2.ZERO
 	
 	var t = create_tween()
-	t.tween_property(node, 'scale', Vector2.ONE, default_speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	t.tween_property(node, 'scale', Vector2.ONE, speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	
 	return t.finished
 
@@ -58,7 +58,7 @@ func animate_shrink(node: Control, speed := default_speed) -> Signal:
 	node.pivot_offset.y = node.size.y / 2
 
 	var t = create_tween()
-	t.tween_property(node, 'scale', Vector2.ZERO, default_speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+	t.tween_property(node, 'scale', Vector2.ZERO, speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
 	
 	return t.finished
 
@@ -67,14 +67,14 @@ func animate_from_left_to_center(node, speed := default_speed) -> Signal:
 	node.position.x = - node.size.x
 	
 	var t = create_tween()
-	t.tween_property(node, 'position:x', get_node_center(node), default_speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	t.tween_property(node, 'position:x', get_node_center(node), speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	
 	return t.finished
 
 
 func animate_from_center_to_left(node: Control, speed := default_speed) -> Signal:
 	var t = create_tween()
-	t.tween_property(node, 'position:x', -node.size.x, default_speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+	t.tween_property(node, 'position:x', -node.size.x, speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
 	
 	return t.finished
 
@@ -83,14 +83,14 @@ func animate_from_right_to_center(node: Control, speed := default_speed) -> Sign
 	node.position.x = get_viewport().get_visible_rect().size.x
 	
 	var t = create_tween()
-	t.tween_property(node, 'position:x', get_node_center(node), default_speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	t.tween_property(node, 'position:x', get_node_center(node), speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	
 	return t.finished
 
 
 func animate_from_center_to_right(node: Control, speed := default_speed) -> Signal:
 	var t = create_tween()
-	t.tween_property(node, 'position:x', node.size.x, default_speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+	t.tween_property(node, 'position:x', node.size.x, speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
 	
 	return t.finished
 
@@ -116,7 +116,7 @@ func animate_shrink_x(node: Control, speed := default_speed) -> Signal:
 	node.pivot_offset.y = node.size.y / 2
 
 	var t = create_tween()
-	t.tween_property(node, 'scale:x', 0.0, .15)
+	t.tween_property(node, 'scale:x', 0.0, speed)
 	
 	return t.finished
 
@@ -126,6 +126,6 @@ func animate_shrink_y(node: Control, speed := default_speed) -> Signal:
 	node.pivot_offset.y = node.size.y / 2
 
 	var t = create_tween()
-	t.tween_property(node, 'scale:y', 0.0, .15)
+	t.tween_property(node, 'scale:y', 0.0, speed)
 	
 	return t.finished

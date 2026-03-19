@@ -42,7 +42,7 @@ func animate_slide_to_right(node: Control, offset := default_offset, speed := de
 	return t.finished
 
 
-func animate_pop(node: Control) -> Signal:
+func animate_pop(node: Control, speed := default_speed) -> Signal:
 	node.pivot_offset.x = node.size.x / 2
 	node.pivot_offset.y = node.size.y / 2
 	node.scale = Vector2.ZERO
@@ -53,7 +53,7 @@ func animate_pop(node: Control) -> Signal:
 	return t.finished
 
 
-func animate_shrink(node: Control) -> Signal:
+func animate_shrink(node: Control, speed := default_speed) -> Signal:
 	node.pivot_offset.x = node.size.x / 2
 	node.pivot_offset.y = node.size.y / 2
 
@@ -63,7 +63,7 @@ func animate_shrink(node: Control) -> Signal:
 	return t.finished
 
 
-func animate_from_left_to_center(node) -> Signal:
+func animate_from_left_to_center(node, speed := default_speed) -> Signal:
 	node.position.x = - node.size.x
 	
 	var t = create_tween()
@@ -72,14 +72,14 @@ func animate_from_left_to_center(node) -> Signal:
 	return t.finished
 
 
-func animate_from_center_to_left(node: Control) -> Signal:
+func animate_from_center_to_left(node: Control, speed := default_speed) -> Signal:
 	var t = create_tween()
 	t.tween_property(node, 'position:x', -node.size.x, default_speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
 	
 	return t.finished
 
 
-func animate_from_right_to_center(node: Control) -> Signal:
+func animate_from_right_to_center(node: Control, speed := default_speed) -> Signal:
 	node.position.x = get_viewport().get_visible_rect().size.x
 	
 	var t = create_tween()
@@ -88,7 +88,7 @@ func animate_from_right_to_center(node: Control) -> Signal:
 	return t.finished
 
 
-func animate_from_center_to_right(node: Control) -> Signal:
+func animate_from_center_to_right(node: Control, speed := default_speed) -> Signal:
 	var t = create_tween()
 	t.tween_property(node, 'position:x', node.size.x, default_speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
 	
@@ -111,7 +111,7 @@ func animate_slide_to_top(node: Control, speed := default_speed) -> Signal:
 	return t.finished
 
 
-func animate_shrink_x(node: Control) -> Signal:
+func animate_shrink_x(node: Control, speed := default_speed) -> Signal:
 	node.pivot_offset.x = node.size.x / 2
 	node.pivot_offset.y = node.size.y / 2
 
@@ -121,7 +121,7 @@ func animate_shrink_x(node: Control) -> Signal:
 	return t.finished
 
 
-func animate_shrink_y(node: Control) -> Signal:
+func animate_shrink_y(node: Control, speed := default_speed) -> Signal:
 	node.pivot_offset.x = node.size.x / 2
 	node.pivot_offset.y = node.size.y / 2
 

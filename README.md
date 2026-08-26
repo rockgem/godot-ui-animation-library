@@ -49,5 +49,24 @@ https://github.com/user-attachments/assets/90c8728d-0d18-4cff-8223-4471f86ffe3d
 
 https://github.com/user-attachments/assets/714d1e2f-a82b-43a2-957f-1ead49e5cf48
 
+# NEW UPDATE - Button animations
+### Instructions
+Just add the Animation Nodes as a child to any control, in this case a Button node.
+
+## Shake on hover
+
+https://github.com/user-attachments/assets/d7149d7f-8a34-4caa-b76f-081cb67db79a
+
+<img width="410" height="240" alt="Screenshot 2026-08-26 201311" src="https://github.com/user-attachments/assets/87abc382-3f96-4fa8-bf4a-8bd101f16af7" />
+
+
+## Zoom/Scale in & out on hover
+
+https://github.com/user-attachments/assets/76133939-828a-4c9b-8a41-066b261601fd
+
+<img width="462" height="263" alt="Screenshot 2026-08-26 201805" src="https://github.com/user-attachments/assets/352dda48-3cf3-4114-aa44-d94c020e6c93" />
+
+
+
 
 

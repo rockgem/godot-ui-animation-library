@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://mvbwgbnc67hf"]
+
+[ext_resource type="PackedScene" uid="uid://cxespcrdibuo" path="res://addons/godot_ui_animations/animation_nodes/animation_shake.tscn" id="1_vfocy"]
+[ext_resource type="PackedScene" uid="uid://cy6yt328r8il2" path="res://addons/godot_ui_animations/animation_nodes/animation_scale.tscn" id="2_yu50b"]
+
+[node name="ButtonAnimationsTesting" type="Control" unique_id=310774109]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=121391680]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2424427, 0.33828053, 0.4307731, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1117254226]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -202.0
+offset_top = 91.0
+offset_right = 202.0
+offset_bottom = 296.0
+grow_horizontal = 2
+theme_override_constants/separation = 20
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=391363348]
+layout_mode = 2
+offset_transform_enabled = true
+theme_override_font_sizes/font_size = 34
+text = "Quick Play"
+
+[node name="AnimationShake" parent="VBoxContainer/Button" unique_id=1705800763 instance=ExtResource("1_vfocy")]
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1534583840]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "Campaign"
+
+[node name="AnimationShake" parent="VBoxContainer/Button2" unique_id=248649760 instance=ExtResource("1_vfocy")]
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1047475039]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "Settings"
+
+[node name="AnimationShake" parent="VBoxContainer/Button3" unique_id=163478294 instance=ExtResource("1_vfocy")]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=716148700]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -464.0
+offset_top = -91.0
+offset_right = 464.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 20
+
+[node name="Button" type="Button" parent="HBoxContainer" unique_id=193475108]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 26
+text = "Leaderboards"
+
+[node name="AnimationScale" parent="HBoxContainer/Button" unique_id=362094088 instance=ExtResource("2_yu50b")]
+
+[node name="Button2" type="Button" parent="HBoxContainer" unique_id=1053478644]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 26
+text = "Rankings"
+
+[node name="AnimationScale" parent="HBoxContainer/Button2" unique_id=1760710734 instance=ExtResource("2_yu50b")]
+
+[node name="Button3" type="Button" parent="HBoxContainer" unique_id=1734826058]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 26
+text = "Events"
+
+[node name="AnimationScale" parent="HBoxContainer/Button3" unique_id=1398115618 instance=ExtResource("2_yu50b")]

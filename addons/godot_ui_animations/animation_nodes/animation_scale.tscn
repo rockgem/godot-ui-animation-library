@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cy6yt328r8il2"]
+
+[ext_resource type="Script" uid="uid://do5hw6gyt4wcj" path="res://addons/godot_ui_animations/animation_nodes/animation_scale.gd" id="1_l6hwy"]
+
+[node name="AnimationScale" type="Node" unique_id=362094088]
+script = ExtResource("1_l6hwy")

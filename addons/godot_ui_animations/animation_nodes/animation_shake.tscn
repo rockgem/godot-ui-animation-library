@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cxespcrdibuo"]
+
+[ext_resource type="Script" uid="uid://dwwvcmeksnhrw" path="res://addons/godot_ui_animations/animation_nodes/animation_shake.gd" id="1_ngkul"]
+
+[node name="AnimationShake" type="Node" unique_id=1705800763]
+script = ExtResource("1_ngkul")
